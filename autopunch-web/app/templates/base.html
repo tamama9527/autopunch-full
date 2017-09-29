@@ -1,0 +1,30 @@
+<html>
+  <head>
+    {% if title %}
+    <title>{{title}}</title>
+    {% else %}
+    <title>microblog</title>
+    {% endif %}
+    <link href="/static/css/bootstrap.min.css" rel="stylesheet">
+  </head>
+  <body>
+    <script src="/static/js/bootstrap.min.js"></script>
+<div class="container">
+  <ul class="nav nav-tabs">
+    <li><a data-toggle="tab" href="/index">Home</a></li>
+    <li><a data-toggle="tab" href="/login">Login</a></li>
+    <li><a data-toggle="tab" href="/create">Create</a></li>
+  </ul>
+</div>
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+    <ul>
+    {% for message in messages %}
+        <li class="alert alert-success" role="alert">{{message}}</li>
+    {% endfor %}
+    </ul>
+    {% endif %}
+    {% endwith %}
+    {% block content %}{% endblock %}
+  </body>
+</html>

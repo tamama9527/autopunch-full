@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='utf-8'?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item android:title="Facebook">
+            <menu>
+                <item android:icon="@drawable/facebook" android:id="@+id/nav_camera" android:title="Import" android:visible="false" />
+            </menu>
+        </item>
+
+
+        <item android:title="Gallery">
+            <menu>
+                <item android:icon="@drawable/facebook100" android:id="@+id/nav_gallery" android:title="Gallery" android:visible="false" />
+            </menu>
+        </item>
+
+
+        <item android:title="Hello">
+            <menu>
+                <item android:icon="@drawable/ic_menu_slideshow" android:id="@+id/nav_slideshow" android:title="Hello" android:visible="false" />
+            </menu>
+
+        </item>
+
+
+        <item android:title="Tools">
+            <menu android:checkableBehavior="single">
+                <item android:icon="@drawable/ic_menu_manage" android:id="@+id/nav_manage" android:title="Tools" android:visible="false" />
+            </menu>
+        </item>
+
+
+        <item android:title="Share">
+            <menu>
+                <item android:icon="@drawable/ic_menu_share" android:id="@+id/nav_share" android:title="Share" android:visible="false" />
+            </menu>
+        </item>
+        <item android:title="Send">
+            <menu>
+                <item android:icon="@drawable/ic_menu_send" android:id="@+id/nav_send" android:title="Send" android:visible="false" />
+            </menu>
+        </item>
+    </group>
+</menu>

@@ -1,0 +1,110 @@
+<!DOCTYPE HTML>
+<!--
+	Spectral by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>打卡小幫手 取消服務</title>
+		<script src="static/assets/js/jquery.min.js"></script>
+		<script src="static/assets/js/jquery.scrollex.min.js"></script>
+		<script src="static/assets/js/jquery.scrolly.min.js"></script>
+		<script src="static/assets/js/skel.min.js"></script>
+		<script src="static/assets/js/util.js"></script>
+		<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+		<script src="static/assets/js/main.js"></script>
+
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="static/assets/css/style.css" type="text/css" />
+        <link rel="Shortcut Icon" type="image/x-icon" href="static/icon.ico"/>
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+		<script type="text/javascript">
+		$(document).ready(function() 
+		{
+			$(".username").focus(function() {
+				$(".user-icon").css("left","-47px");
+			});
+			$(".username").blur(function() {
+				$(".user-icon").css("left","0px");
+			});
+			
+			$(".password").focus(function() {
+				$(".pass-icon").css("left","-47px");
+			});
+			$(".password").blur(function() {
+				$(".pass-icon").css("left","0px");
+			});
+		});
+		</script>
+	</head>
+	<body class="landing">
+
+		<!-- Page Wrapper -->
+				<!-- Header -->
+					<header id="header" class="alt">
+						<h1><a href="index.html">Spectral</a></h1>
+						<nav id="nav">
+							<ul>
+								<li class="special">
+									<a href="#menu" class="menuToggle"><span>Menu</span></a>
+									<div id="menu">
+										<ul>
+											<li><a href="/index">Home</a></li>
+											<li><a href="/login">Log In</a></li>
+                                            <li><a href="/cancel">Cancel</a></li>
+                                            <li><a href="/privacy">隱私權條款</a></li>
+                                            <li><a href="/terms">服務條款</a></li>
+										</ul>
+									</div>
+								</li>
+							</ul>
+						</nav>
+					</header>
+<div id="wrapper">
+
+	<!--SLIDE-IN ICONS-->
+    <div class="user-icon"></div>
+    <div class="pass-icon"></div>
+    <!--END SLIDE-IN ICONS-->
+
+<!--LOGIN FORM-->
+<form name="login-form" class="login-form" action="" method="post">
+	{{form.hidden_tag()}}
+	<!--HEADER-->
+    <div class="header">
+    <!--TITLE--><h1>打卡小幫手</br>取消服務</h1><!--END TITLE-->
+    <!--DESCRIPTION--><span>本服務需要NID驗證，請輸入NID帳密。</span><!--END DESCRIPTION-->
+    </div>
+    <!--END HEADER-->
+	
+	<!--CONTENT-->
+    <div class="content">
+        {{form.account(class_="input username",placeholder="Username")}}
+        {{form.password(class_="input password",placeholder="Password")}}
+        <!--<input name="username" type="text" class="input username" placeholder="Username" />-->
+        <!--<input name="password" type="password" class="input password" placeholder="Password" />-->
+	<!--USERNAME--><!----><!--END USERNAME-->
+    <!--PASSWORD--><!----><!--END PASSWORD-->
+    </div>
+    <!--END CONTENT-->
+    
+    <!--FOOTER-->
+    <div class="footer">
+    <!--LOGIN BUTTON--><input type="submit" name="submit" value="Login" class="button" /><!--END LOGIN BUTTON-->
+    </div>
+    <!--END FOOTER-->
+
+</form>
+<!--END LOGIN FORM-->
+
+</div>
+<!--END LOGIN FORM-->
+
+		<!-- Scripts -->
+
+	</body>
+</html>

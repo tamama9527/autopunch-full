@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container">
+{% if link %}
+<a href={{link}} class="btn btn-success" >Download the apk</a>
+{% else %}
+<form class="form-horizontal" action="" method="post" name="apk">
+	
+
+	<div class="checkbox">
+		<input type="checkbox" name="function" value="Facebook" />Facebook<br/>
+	</div>
+	<div class="checkbox">
+		<input type="checkbox" name="function" value="Gallery" />Gallery<br/>
+	<div class="checkbox">
+		<input type="checkbox" name="function" value="Hello" />Hello<br/>
+	</div>
+	<div class="checkbox">
+		<input type="checkbox" name="function" value="Tools" />Tools<br/>
+	</div>
+	<div class="checkbox">
+		<input type="checkbox" name="function" value="Share" />Share<br/>
+	</div>
+	<div class="checkbox">
+		<input type="checkbox" name="function" value="Send" />Send<br/>
+	</div>
+		<input class="btn btn-success" name='apk' type="submit" value="Create">
+</form>
+{% endif %}
+</div>
+{% endblock %}
